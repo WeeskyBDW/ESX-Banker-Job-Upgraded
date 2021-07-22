@@ -11,9 +11,9 @@ Locales['fr'] = {
   ['frozenLoanMenuItem']                              = "📁 Dossiers de Prêts Gelés",
   ['doLoanMenuItem']                                  = "💰 Effectuer un prêt",
   ['billingMenuItem']                                 = "📝 Facturation",
+  ['viewSocietiesMenu']                               = "💵 Voir les comptes d'entreprises",
   ['closedSavingsMenuItem']                           = "⛔️ Livrets A Clos",
   ['closedRiskedSavingsMenuItem']                     = "⛔️ Livrets à Risques Clos",
-  ['viewSocietiesMenu']                               = "💵 Voir les comptes d'entreprises",
   ['companyManagementMenuItem']                       = "💎 Gestion d'Entreprise",
   ['separatorMenuItem']                               = "- - - - -",
 

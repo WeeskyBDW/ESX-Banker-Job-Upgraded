@@ -10,6 +10,7 @@ Locales['en'] = {
   ['activeLoanMenuItem']                              = "📁 Active Loans",
   ['frozenLoanMenuItem']                              = "📁 Frozen Loans",
   ['doLoanMenuItem']                                  = "💰 Make a Loan",
+  ['viewSocietiesMenu']                               = "💵 Voir les comptes d'entreprises",
   ['billingMenuItem']                                 = "📝 Billing",
   ['closedSavingsMenuItem']                           = "⛔️ Closed savings",
   ['closedRiskedSavingsMenuItem']                     = "⛔️ Closed risked savings",
