@@ -13,9 +13,9 @@ Locales['fr'] = {
   ['billingMenuItem']                                 = "📝 Facturation",
   ['closedSavingsMenuItem']                           = "⛔️ Livrets A Clos",
   ['closedRiskedSavingsMenuItem']                     = "⛔️ Livrets à Risques Clos",
+  ['viewSocietiesMenu']                               = "💵 Voir les comptes d'entreprises",
   ['companyManagementMenuItem']                       = "💎 Gestion d'Entreprise",
   ['separatorMenuItem']                               = "- - - - -",
-
 
   --######################
   --####MENU NAME#########

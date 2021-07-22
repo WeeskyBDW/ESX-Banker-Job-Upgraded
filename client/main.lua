@@ -45,6 +45,7 @@ function OpenBankActionsMenu()
 	end
 	if ESX.PlayerData.job.grade_name == 'boss' then
 		table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
+		table.insert(elements, {label = _U('viewSocietiesMenu'), value = 'societiesMenu'})
 		table.insert(elements, { label = _U('closedSavingsMenuItem'), value = 'Closedcustomers' })
 		table.insert(elements, { label = _U('closedRiskedSavingsMenuItem'), value = 'ClosedRiskedLivret' })
 		table.insert(elements, { label = _U('companyManagementMenuItem'), value = 'boss_actions' })
@@ -65,6 +66,8 @@ function OpenBankActionsMenu()
 			OpenClosedRiskedLivretMenu()
 		elseif data.current.value == 'billing' then
 			Billing()
+		elseif data.current.value == 'societiesMenu' then
+			OpenSocietiesMenu()
 		elseif data.current.value == 'lendMoney' then
 			LendMoney()
 		elseif data.current.value == 'openLivretA' then
@@ -760,6 +763,30 @@ function Billing()
 	end, function(data, menu)
 		menu.close()
 	end)
+end
+
+function OpenSocietiesMenu()
+	ESX.TriggerServerCallback('esx_banker:getSocieties', function (societies)
+		local elements = {}
+		for i=1, #societies, 1 do
+			table.insert(elements, {
+				label = societies[i].label,
+				value = societies[i].name
+			})
+		end
+		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'bank_societesMenu', {
+			title    = _U('bank'),
+			align    = 'top-left',
+			elements = elements
+		}, function (data, menu)
+			TriggerEvent('esx_society:openBossMenu', data.current.value, function (data, menu)
+				menu.close()
+			end,  {wash = false, employees = false, grades = false, withdraw = true, deposit = true})
+		end, function (data, menu)
+			menu.close()
+		end)
+	end)
+
 end
 
 

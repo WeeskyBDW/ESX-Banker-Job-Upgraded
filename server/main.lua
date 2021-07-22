@@ -402,6 +402,12 @@ ESX.RegisterServerCallback('esx_bankerjob:getLoanAccounts', function (source, cb
 	end)
 end)
 
+ESX.RegisterServerCallback('esx_banker:getSocieties', function (source, cb)
+	TriggerEvent('esx_society:getSocieties', function(societies)
+		cb(societies)
+	end)
+end)
+
 ESX.RegisterServerCallback('esx_bankerjob:getActiveLoanAccounts', function (source, cb)
 	local customers = {}
 	MySQL.Async.fetchAll('SELECT bank_lent_money.id, bank_lent_money.firstname, bank_lent_money.lastname, bank_lent_money.amount, bank_lent_money.rate, bank_lent_money.remainDeadlines, bank_lent_money.deadlines, bank_lent_money.amountNextDeadline, bank_lent_money.alreadyPaid, bank_lent_money.timeLeft, bank_lent_money.timeBeforeDeadline, bank_lent_money.advisorFirstname, bank_lent_money.advisorLastname, bank_lent_money.status FROM bank_lent_money WHERE bank_lent_money.status = "Ouvert" ORDER BY id ASC',
