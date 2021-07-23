@@ -29,20 +29,20 @@ end)
 
 function OpenBankActionsMenu()
 	local elements = {}
-	if ESX.PlayerData.job.grade_name ~= 'conveyor' and ESX.PlayerData.job.grade_name ~= 'conveyor_boss' then
-		table.insert(elements, {label = _U('savingsMenuItem'), value = 'savingsAccounts'})
-		table.insert(elements, {label = _U('openSavingsMenuItem'), value = 'openLivretA' })
-		table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
-		table.insert(elements, {label = _U('riskedSavingsMenuItem'), value = 'riskedLivret'})
-		table.insert(elements, {label = _U('openRiskedSavingsMenuItem'), value = 'openRisk' })
-		table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
-		table.insert(elements, {label = _U('loanMenuItem'), value = 'lentMoney' })
-		table.insert(elements, {label = _U('activeLoanMenuItem'), value = 'activeMoney' })
-		table.insert(elements, {label = _U('frozenLoanMenuItem'), value = 'frozenMoney' })
-		table.insert(elements, {label = _U('doLoanMenuItem'), value = 'lendMoney' })
-		table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
-		table.insert(elements, {label = _U('billingMenuItem'),   value = 'billing'})
-	end
+	
+	table.insert(elements, {label = _U('savingsMenuItem'), value = 'savingsAccounts'})
+	table.insert(elements, {label = _U('openSavingsMenuItem'), value = 'openLivretA' })
+	table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
+	table.insert(elements, {label = _U('riskedSavingsMenuItem'), value = 'riskedLivret'})
+	table.insert(elements, {label = _U('openRiskedSavingsMenuItem'), value = 'openRisk' })
+	table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
+	table.insert(elements, {label = _U('loanMenuItem'), value = 'lentMoney' })
+	table.insert(elements, {label = _U('activeLoanMenuItem'), value = 'activeMoney' })
+	table.insert(elements, {label = _U('frozenLoanMenuItem'), value = 'frozenMoney' })
+	table.insert(elements, {label = _U('doLoanMenuItem'), value = 'lendMoney' })
+	table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
+	table.insert(elements, {label = _U('billingMenuItem'),   value = 'billing'})
+	
 	if ESX.PlayerData.job.grade_name ~= 'conveyor' or ESX.PlayerData.job.grade_name ~= 'conveyor_boss' then
 		table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
 		table.insert(elements, {label = _U('viewSocietiesMenu'), value = 'societiesMenu'})
