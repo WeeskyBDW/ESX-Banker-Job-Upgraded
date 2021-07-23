@@ -43,7 +43,7 @@ function OpenBankActionsMenu()
 	table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
 	table.insert(elements, {label = _U('billingMenuItem'),   value = 'billing'})
 	
-	if ESX.PlayerData.job.grade_name ~= 'conveyor' or ESX.PlayerData.job.grade_name ~= 'conveyor_boss' then
+	if ESX.PlayerData.job.grade_name ~= 'conveyor' and ESX.PlayerData.job.grade_name ~= 'conveyor_boss' then
 		table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
 		table.insert(elements, {label = _U('viewSocietiesMenu'), value = 'societiesMenu'})
 		table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
