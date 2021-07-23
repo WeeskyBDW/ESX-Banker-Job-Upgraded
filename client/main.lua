@@ -46,7 +46,6 @@ function OpenBankActionsMenu()
 	if ESX.PlayerData.job.grade_name ~= 'conveyor' and ESX.PlayerData.job.grade_name ~= 'conveyor_boss' then
 		table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
 		table.insert(elements, {label = _U('viewSocietiesMenu'), value = 'societiesMenu'})
-		table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
 	end
 	if ESX.PlayerData.job.grade_name == 'boss' then
 		table.insert(elements, {label = _U('separatorMenuItem'), value = ''})
